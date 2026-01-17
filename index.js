@@ -3,7 +3,16 @@ const app = express();
 const PORT = 3000;
 
 app.get("/", (req, res) => {
-  res.send("Hello, World!");
+  res.send("<h1>Hello, World!</h1>");
+});
+app.post("/register", (req, res) => {
+  res.sendStatus(201);
+});
+app.put("/user/jerick", (req, res) => {
+  res.sendStatus(200);
+});
+app.patch("/user/jerick", (req, res) => {
+  res.sendStatus(200);
 });
 
 app.listen(PORT, () => {
